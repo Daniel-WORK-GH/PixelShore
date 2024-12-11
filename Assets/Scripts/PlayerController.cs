@@ -45,11 +45,6 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = new Vector3(moveX, moveY, 0f);
         transform.position += move * moveSpeed * Time.deltaTime;
-        
-        if (Input.GetMouseButton(0))
-        {
-                
-        }
     }
 
     void CheckForNearbyVehicle()
