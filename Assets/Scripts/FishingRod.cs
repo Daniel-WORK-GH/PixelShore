@@ -4,8 +4,8 @@ public class FishingRod : MonoBehaviour
 {
     public LineRenderer lineRenderer;    // The LineRenderer to display the fishing rod.
     public float throwSpeed = 15f;        // The speed at which the fishing rod is thrown.
-    public float maxThrowDistance = 3f; // The maximum distance the fishing rod can travel.
-    
+    public float maxThrowDistance = 3f;// The maximum distance the fishing rod can travel.
+
     public FishSpawner spawner;
 
     private Vector3 startPoint;          // The starting point of the fishing rod (the player's position).
