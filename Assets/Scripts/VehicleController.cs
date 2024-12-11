@@ -38,12 +38,11 @@ public class VehicleController : MonoBehaviour
             movement = -moveSpeed * Time.deltaTime;
             driving = true;
         }
-        
-        // Apply movement
+
         transform.position += movement * transform.up;
 
         // Apply rotation
-        if(driving)
+        if (driving)
         {
             float rotation = 0f;
             if (Input.GetKey(KeyCode.A))

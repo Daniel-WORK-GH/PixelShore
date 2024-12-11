@@ -30,17 +30,17 @@ public class FishingRod : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // Left-click to throw the fishing rod
         {
-            if(isThrowing)
+            if (isThrowing)
             {
                 isThrowing = false;
                 lineRenderer.enabled = false;
 
-                if(spawner.TryCatchFish())
+                if (spawner.TryCatchFish())
                 {
                     Debug.Log("Caught fish!");
                 }
             }
-            else if(!isThrowing)
+            else if (!isThrowing)
             {
                 ThrowFishingRod();
             }
@@ -66,7 +66,7 @@ public class FishingRod : MonoBehaviour
 
             if (IsTouchingWater(currentPoint) && currentPoint == targetPoint)
             {
-                if(spawner.TryCatchFish())
+                if (spawner.TryCatchFish())
                 {
                     lineRenderer.SetPosition(1, new Vector3(currentPoint.x, currentPoint.y - 0.1f, currentPoint.z));
                 }

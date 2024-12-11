@@ -19,7 +19,7 @@ public class FishSpawner : MonoBehaviour
         // Generate a random number (for example, between 0 and 100)
         randomNumber = Random.Range(0f, 100f);
     }
-    public bool TryCatchFish() 
+    public bool TryCatchFish()
     {
         Debug.Log(randomNumber > (100 - fishChace * 100));
         return randomNumber > (100 - fishChace * 100);

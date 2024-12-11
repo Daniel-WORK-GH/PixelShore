@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(moveX, moveY, 0f);
         transform.position += move * moveSpeed * Time.deltaTime;
         
-        if(Input.GetMouseButton(0)) // left button
+        if (Input.GetMouseButton(0))
         {
                 
         }
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
             if (Vector3.Distance(transform.position, vehicle.transform.position) <= interactionRange)
             {
                 currentVehicle = vehicle;
-                break;  
+                break;
             }
         }
     }
