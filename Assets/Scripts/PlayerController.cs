@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private VehicleController currentVehicle;
     private SpriteRenderer spriteRenderer;
 
+    public FishingRod rod;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -74,6 +76,8 @@ public class PlayerController : MonoBehaviour
 
         mainCamera.orthographicSize = zoomedOutSize;
         spriteRenderer.enabled = false; // Hide the player
+
+        rod.gameObject.SetActive(false);
     }
 
     void ExitVehicle()
@@ -90,5 +94,6 @@ public class PlayerController : MonoBehaviour
         mainCamera.orthographicSize = zoomedInSize;
 
         spriteRenderer.enabled = true; // Show the player
+        rod.gameObject.SetActive(true);
     }
 }
